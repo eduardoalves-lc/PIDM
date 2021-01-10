@@ -4,7 +4,7 @@ import {Text, View, StyleSheet} from 'react-native';
 import IMC from './src/IMCApp';
 
 export default function App() {
-  return <IMC />;
+  return <IMC />
 }
 
 //Copiado Aula 02 Slide 23
