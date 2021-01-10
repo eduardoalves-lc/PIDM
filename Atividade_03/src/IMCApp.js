@@ -17,16 +17,19 @@ export default class IMCApp extends Component{
         return(
             <View style={styles.container}><Text style={styles.headerText}> Calculadora IMC </Text>
                 <View style={styles.Text}><Text> Peso (kg): </Text>
-                    <TextInput style={styles.textInput} placeholder="Diite o seu peso"
-                        onChangeText={(peso)=>this.setState({peso, calculo:false})}/>
+                    <TextInput style={styles.textInput} 
+                    keyboardType = 'numeric' maxLength={6}
+                    placeholder="Diite o seu peso" 
+                    onChangeText={(peso)=>this.setState({peso, calculo:false})}/>
                 </View>
 
                 <View style={styles.Text}><Text> Altura (Metros): </Text>
-                    <TextInput style={styles.textInput} placeholder="Digite a sua altura"
-                        onChangeText={(altura)=>{this.setState({altura,calculo:false});
-                            }
-                        }/>
+                    <TextInput style={styles.textInput} 
+                    keyboardType = 'numeric' maxLength={4}
+                    placeholder="Digite a sua altura"
+                    onChangeText={(altura)=>{this.setState({altura,calculo:false});}}/>
                 </View>
+
                 <Calculo peso = {this.state.peso} altura = {this.state.altura} calcular = {this.state.calculo}/>
 
                 <View style={styles.viewButton}><Button title = "Calcular IMC"
@@ -35,7 +38,7 @@ export default class IMCApp extends Component{
                 </View>
             </View>
         )
-    }        
+    }
 }
 
 //Copiado Aula 02 Slide 23
